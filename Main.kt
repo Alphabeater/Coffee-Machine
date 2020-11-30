@@ -1,7 +1,10 @@
 package machine
 import java.lang.Exception
 
-open class Coffee(var water: Int, var milk: Int, var beans: Int, var cups: Int, var money: Int) {
+/*Not sure what to do for stage 6/6, stage 5/6 works.
+I don't know how state design patterns work, instructions are unclear.*/
+
+open class CoffeeMachine(var water: Int, var milk: Int, var beans: Int, var cups: Int, var money: Int) {
 
     fun buy(option: Int) {
         when (option) {
@@ -49,7 +52,7 @@ open class Coffee(var water: Int, var milk: Int, var beans: Int, var cups: Int, 
 }
 
 fun main() {
-    val coffeeMachine = Coffee(400, 540, 120, 9, 550)
+    val coffeeMachine = CoffeeMachine(400, 540, 120, 9, 550)
 
     loop@do {
         print("\nWrite action (buy, fill, take, remaining, exit): ")
